@@ -1,3 +1,4 @@
+#Setting up necessary parameters for the webcam application to function as expected
 from lib.device import Camera
 from lib.processors_noopenmdao import findFaceGetPulse
 from lib.interface import plotXY, imshow, waitKey, destroyWindow
@@ -5,23 +6,21 @@ from cv2 import moveWindow
 import argparse
 import numpy as np
 import datetime
-#TODO: work on serial port comms, if anyone asks for it
-#from serial import Serial
+#Importing cv is a requirement in order for the webcam to function properly
 import socket
 import sys
 
 class getPulseApp(object):
 
     """
-    Python application that finds a face in a webcam stream, then isolates the
-    forehead.
+    This Python Application utilizez a webcam to monitor the user's heart rate. It works on both Windows and macos machines with webcams.
 
-    Then the average green-light intensity in the forehead region is gathered
+    Once the application is launched, the end user must lock in on their forehead. Then the average green-light intensity in the forehead region is gathered
     over time, and the detected person's pulse is estimated.
     """
 
     def __init__(self, args):
-        # Imaging device - must be a connected camera (not an ip camera or mjpeg
+        # Imaging device - must be a connected web camera (not an ip camera or mjpeg
         # stream)
         serial = args.serial
         baud = args.baud

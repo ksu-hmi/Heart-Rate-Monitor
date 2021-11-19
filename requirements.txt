@@ -1,6 +1,12 @@
-numpy==1.11.1
-pyqtgraph==0.9.10
-scipy==0.17.1
-PyQt4==4.11.4
-pyserial==3.1.1
-sympy==1.0
+Python must be installed on an end user's machine.
+
+Numpy must be installed utilizing the following pip command: pip install numpy
+
+Install opencv2 on MacOS: brew install opencv@2
+  OpenCV-Python is a library of Python bindings designed to solve computer vision problems. This will aid with the camera display.
+
+Use the following commands in the terminal to check the library versions installed:
+
+python --version
+python -c "import numpy; print numpy.__version__"
+python -c "import cv2; print cv2.__version__"

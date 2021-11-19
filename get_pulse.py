@@ -1,12 +1,18 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Main Python code file for our webcam application
 #Setting up necessary parameters for the webcam application to function as expected
+
 from lib.device import Camera
 from lib.processors_noopenmdao import findFaceGetPulse
 from lib.interface import plotXY, imshow, waitKey, destroyWindow
+#Importing cv is a requirement in order for the webcam to function properly, as it allows us to capture a video from the camera
 from cv2 import moveWindow
 import argparse
 import numpy as np
 import datetime
-#Importing cv is a requirement in order for the webcam to function properly
+
 import socket
 import sys
 

@@ -47,7 +47,8 @@ class getPulseApp(object):
                 ip = udp
                 port = 5005
             else:
-                ip, port = udp.split(":")
+                #Added paranthesis to group the left side function together, as it's the same function.
+                (ip, port) = udp.split(":")
                 port = int(port)
             self.udp = (ip, port)
             self.sock = socket.socket(socket.AF_INET, # Internet

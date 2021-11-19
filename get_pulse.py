@@ -82,12 +82,14 @@ class getPulseApp(object):
         self.plot_title = \ #Added the escape character to represent certain the whitespace character.
             'Data display - raw signal (top) and PSD (bottom)'
 
-        # Maps keystrokes to specified methods
-        #(A GUI window must have focus for these to work)
-        self.key_controls = {"s": self.toggle_search,
-                             "d": self.toggle_display_plot,
-                             "c": self.toggle_cam,
-                             "f": self.write_csv}
+        # Maps keystrokes to specified methods as A GUI window must have focus for these to work
+        #This code is setting these map keystrokes
+        self.key_controls = {
+            's': self.toggle_search,
+            'd': self.toggle_display_plot,
+            'c': self.toggle_cam,
+            'f': self.write_csv,
+            }
 
     def toggle_cam(self):
         if len(self.cameras) > 1:

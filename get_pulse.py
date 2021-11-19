@@ -64,7 +64,7 @@ class getPulseApp(object):
                 break
         self.w, self.h = 0, 0
         self.pressed = 0
-        # Containerized analysis of recieved image frames (an openMDAO assembly)
+        # This is performing an analysis of recieved image frames (an openMDAO assembly)
         # is defined next.
 
         # This assembly is designed to handle all image & signal analysis,
@@ -79,7 +79,8 @@ class getPulseApp(object):
 
         # Init parameters for the cardiac data plot
         self.bpm_plot = False
-        self.plot_title = "Data display - raw signal (top) and PSD (bottom)"
+        self.plot_title = \ #Added the escape character to represent certain the whitespace character.
+            'Data display - raw signal (top) and PSD (bottom)'
 
         # Maps keystrokes to specified methods
         #(A GUI window must have focus for these to work)

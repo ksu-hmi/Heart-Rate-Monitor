@@ -19,10 +19,12 @@ import sys
 class getPulseApp(object):
 
     """
-    This Python Application utilizez a webcam to monitor the user's heart rate. It works on both Windows and macos machines with webcams.
+    Python application that finds a face in a webcam stream, then isolates the
+    forehead.
 
-    Once the application is launched, the end user must lock in on their forehead. Then the average green-light intensity in the forehead region is gathered
+    Then the average green-light intensity in the forehead region is gathered
     over time, and the detected person's pulse is estimated.
+
     """
 
     def __init__(self, args):
@@ -64,8 +66,9 @@ class getPulseApp(object):
                 break
         self.w, self.h = 0, 0
         self.pressed = 0
-        # This is performing an analysis of recieved image frames (an openMDAO assembly)
+       # Containerized analysis of recieved image frames (an openMDAO assembly)
         # is defined next.
+
 
         # This assembly is designed to handle all image & signal analysis,
         # such as face detection, forehead isolation, time series collection,

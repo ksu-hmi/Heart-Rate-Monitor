@@ -82,7 +82,7 @@ class getPulseApp(object):
 
         # Init parameters for the cardiac data plot
         self.bpm_plot = False
-        self.plot_title = \ #Added the escape character to represent certain the whitespace character.
+        self.plot_title = \ #Added the escape character to represent certain the whitespace character
             'Data display - raw signal (top) and PSD (bottom)'
 
         # Maps keystrokes to specified methods as A GUI window must have focus for these to work
